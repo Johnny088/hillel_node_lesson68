@@ -14,9 +14,10 @@ let total = 0;
 readableStream.on('data', chunk => {
   // console.log(`Chunk #${counter}: ${chunk.byteLength} bytes`);
   counter += 1;
-  // total += chunk.byteLength;
+  total += chunk.byteLength;
 });
 
 readableStream.on('end', () => {
   console.log(`Total number: ${counter} chunks`);
+  console.log(`Total size: ${total} bytes`);
 });
