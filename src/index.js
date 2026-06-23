@@ -8,7 +8,7 @@ const readableStream = fs.createReadStream(filePath, {
   highWaterMark: 1024,
 });
 
-let counter = 1;
+let counter = 0;
 let total = 0;
 
 readableStream.on('data', chunk => {
